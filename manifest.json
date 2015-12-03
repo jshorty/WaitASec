@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "WaitASec",
+  "description": "Delays clicking through links to prevent mindless internet wandering, with customizable UX. Stop & think before clicking a link!",
+  "version": "0.1",
+  "author": "Jacob Shorty",
+
+  "icons": {
+    "128":"TODO",
+    "48":"TODO",
+    "16":"TODO"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "19": "TODO",
+      "38": "TODO"
+    },
+    "default_title": "WaitASec: Delayed Links",
+    "default_popup": "popup.html"
+  }
+}
