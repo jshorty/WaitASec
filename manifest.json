@@ -6,15 +6,11 @@
   "author": "Jacob Shorty",
 
   "icons": {
-    "128":"TODO",
-    "48":"TODO",
-    "16":"TODO"
   },
 
   "browser_action": {
     "default_icon": {
-      "19": "TODO",
-      "38": "TODO"
+      "19": "icon.png"
     },
     "default_title": "WaitASec: Delayed Links",
     "default_popup": "popup.html"
