@@ -1,37 +1,97 @@
 <!doctype html>
-<!--
- This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
- -->
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
+    <title>WaitASec Browser Action Popup</title>
     <style>
       body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
+        background-color: #e0e5db;
+        font-family: "PT Sans", Verdana, sans-serif;
+        width: 220px;
+        height: 290px;
+        margin: 0px 0px;
+        padding: none;
       }
-      #status {
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-width: 400px;
+      ul {
+        display: block;
+        margin: 0px auto;
+        padding: 0px 0px;
+        list-style: none;
       }
-    </style>
+      li {
+        text-align: center;
+        font-size: 14px;
+        color: #0f0a01;
+        padding-bottom: 15px;
+      }
+      small {
+        display: block;
+        padding-top: 3px;
+        color: #666666;
+      }
+      input[type="text"] {
+        text-align: center;
+        width: 20px;
+      }
+      small input[type="checkbox"] {
+        width: 5px;
+        margin-right: 5px;
+      }
+      #popup-logo {
+        float: right;
+        margin-right: 10px;
+      }
+      #menu {
+        width: 220px;
+        height: 210px;
+        float: right;
+        padding-top: 5px;
+      }
+      #texture {
+        width: 220px;
+        height: 290px;
+        background: url("grain.jpg");
+        background-size: cover;
+        opacity: 0.1;
+      }
 
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="popup.js"></script>
+    </style>
   </head>
   <body>
-    <div id="status"></div>
-    <img id="image-result" hidden>
+    <img id="popup-logo" src="popup_logo.png">
+    <div id="menu">
+      <ul>
+        <li>
+          <input id="use_delay" type="checkbox">
+          <strong>Delayed Clickability</strong>
+          <small>
+          <input id="delay_seconds" type="text"></input>
+          &nbsp;seconds
+          </small>
+          <small>
+            <input id="delay_sitelist" type="checkbox">
+            only for <a>site list</a>
+          </small>
+        </li>
+
+        <li>
+          <input id="use_confirm" type="checkbox">
+          <strong>Confirmation Popup</strong>
+          <small>
+            <input id="confirm_sitelist" type="checkbox">
+            only for <a>site list</a>
+          </small>
+        </li>
+
+        <li>
+          <strong>Time Rules</strong>
+          <small><a>edit rules</a></small>
+          <small>
+            <input id="confirm_sitelist" type="checkbox">
+            only for <a>site list</a>
+          </small>
+        </li>
+      </ul>
+    </div>
+    <div id="texture"></div>
   </body>
 </html>
-
