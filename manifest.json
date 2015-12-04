@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "WaitASec",
-  "description": "Delays clicking through links to prevent mindless internet wandering, with customizable UX. Stop & think before clicking a link!",
+  "description": "Avoid impulse clicks! Delays link clickthrough via confirmation to prevent mindless internet wandering.",
   "version": "0.1",
   "author": "Jacob Shorty",
 

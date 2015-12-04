@@ -10,6 +10,8 @@
         height: 290px;
         margin: 0px 0px;
         padding: none;
+        border: 2px solid #457c39;
+        box-shadow: inset 1px 1px 5px #457c39;
       }
       ul {
         display: block;
@@ -22,6 +24,16 @@
         font-size: 14px;
         color: #0f0a01;
         padding-bottom: 15px;
+      }
+      li:last-of-type {
+        color: #666666;
+      }
+      hr {
+        color: #457c39;
+        border: 1px solid #457c39;
+        box-shadow: 1px 1px 1px #457c39;
+        margin-bottom: 15px;
+        width: 100px;
       }
       small {
         display: block;
@@ -53,6 +65,25 @@
         background-size: cover;
         opacity: 0.1;
       }
+      .pine {
+        position: fixed;
+        float: right;
+        width: 220px;
+        height: 290px;
+        opacity: 0.05;
+      }
+      .pine.right-pine {
+        background: url("pine-right.png");
+        background-size: contain;
+        top: 20px;
+        left: 120px;
+      }
+      .pine.left-pine {
+        background: url("pine-left.png");
+        background-size: contain;
+        top: 140px;
+        left: -115px;
+      }
 
     </style>
   </head>
@@ -60,6 +91,15 @@
     <img id="popup-logo" src="popup_logo.png">
     <div id="menu">
       <ul>
+        <li>
+          <input id="use_confirm" type="checkbox">
+          <strong>Confirmation Popup</strong>
+          <small>
+            <input id="confirm_sitelist" type="checkbox">
+            only for <a>site list</a>
+          </small>
+        </li>
+
         <li>
           <input id="use_delay" type="checkbox">
           <strong>Delayed Clickability</strong>
@@ -73,14 +113,7 @@
           </small>
         </li>
 
-        <li>
-          <input id="use_confirm" type="checkbox">
-          <strong>Confirmation Popup</strong>
-          <small>
-            <input id="confirm_sitelist" type="checkbox">
-            only for <a>site list</a>
-          </small>
-        </li>
+        <hr>
 
         <li>
           <strong>Time Rules</strong>
@@ -92,6 +125,8 @@
         </li>
       </ul>
     </div>
+    <div class="pine right-pine"></div>
+    <div class="pine left-pine"></div>
     <div id="texture"></div>
   </body>
 </html>
